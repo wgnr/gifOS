@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gif.OS - Mis Guifos</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="gradient headerBar srinkText">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+            de visitas: 12.765.803</div>
+        <div class="container barraPrincipal">
+            <div class="logo_main btn" onclick="self.location.href = '../index.html'"></div>
+            <nav>
+                <ul>
+                    <li><a class="btnButton btnCrearGuifo btn" href="../crearguifos/index.html">Crear Guifos</a></li>
+                    <li>
+                        <div>
+                            <span class="btnButton btnTheme btn" onclick="toggleHideInThemeList()">Elegir tema</span>
+                            <div class="menuBtnThemes windowBackground hide">
+                                <span class="btnThemeList btnThemeLight btn" onclick="setThemeTo(true)">Sailor
+                                    Day</span>
+                                <span class="btnThemeList btnThemeDark btn" onclick="setThemeTo(false)">Sailor
+                                    Night</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="btnMisGuifos btn btnMisGuifosActive" href="./index.html">Mis Guifos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="misGuifos">
+        <div class="container">
+            <h2 class="sectionTitle">Mis guifos</h2>
+            <div class="grilla grillaMisGuifos">
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/const/const.js"></script>
+    <script src="../assets/js/classes/Giphy.js"></script>
+    <script src="../assets/js/helper.js"></script>
+    <script src="../assets/js/misGuifos.js"></script>
+
+</body>
+
+</html>

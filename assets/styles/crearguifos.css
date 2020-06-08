@@ -1,0 +1,422 @@
+/* HEADER - INICIO */
+.container {
+    /* width: calc(100% - 72px); */
+    min-width: 860px;
+}
+
+.relativeElement {
+    position: relative;
+}
+
+.backArrow {
+    position: absolute;
+    left: -36px;
+}
+
+/* HELP DIALOG - INICIO */
+.containerCrearGuifosMeesage {
+    width: 684px;
+    height: 386px;
+    margin: 75px auto 0px auto;
+}
+
+.crearGuifosTextDiv {
+    margin-top: 30px;
+    margin-left: 73px;
+    position: relative;
+
+}
+
+.crearGuifosTextIcon {
+    position: absolute;
+    left: -48px;
+}
+
+.crearGuifosTextDiv>h3 {
+    font-size: 16px;
+    color: var(--color03);
+    letter-spacing: 0;
+    line-height: 22px;
+    height: 22px;
+}
+
+.crearGuifosTextDescrip {
+    margin-top: 17px;
+    width: 518px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.crearGuifosTextDescrip>p {
+    font-size: 14px;
+    color: var(--color03);
+    letter-spacing: 0;
+    line-height: 20px;
+
+    /* text-align: left; */
+    /* white-space: pre-line; */
+}
+
+.btnCrearGuifoComenzar {
+    font-family: var(--ALL_font-family);
+    width: 144px;
+    height: 36px;
+    box-sizing: border-box;
+
+    line-height: 36px;
+
+    margin-left: 16px;
+}
+
+.crearGuifosMeesageBtns {
+    margin-top: 28px;
+    float: right;
+    margin-right: 36px;
+}
+
+.btnCrearGuifoCancelar {
+    width: 144px;
+    height: 36px;
+    box-sizing: border-box;
+
+    line-height: 36px;
+
+    margin-left: 16px;
+}
+
+.btnSecondary {
+    font-family: var(--btn-secondary_font-family);
+    font-weight: var(--btn-secondary_font-weight);
+    font-size: var(--btn-secondary_font-size);
+    color: var(--btn-secondary_color);
+    letter-spacing: var(--btn-secondary_letter-spacing);
+    text-align: var(--btn-secondary_text-align);
+    line-height: var(--btn-secondary_line-height);
+    background: var(--btn-secondary_background);
+    border: var(--btn-secondary_border);
+    box-shadow: var(--btn-secondary_box-shadow);
+}
+
+.btnSecondary:hover {
+    outline: var(--btn-secondary_outline);
+    outline-offset: var(--btn-secondary_outline-offset);
+}
+
+/* HELP DIALOG - FIN */
+
+/* GRABO VIDEO - INICIO */
+.containerCrearGuifosCapturar {
+    width: 860px;
+    height: 548px;
+    margin: 85px auto 0px auto;
+    position: relative;
+}
+
+.containerCrearGuifosCapturar>img {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    width: 16px;
+    height: 14px;
+}
+
+.containerCrearGuifosVideoYBotones {
+    /* margin: 8px 14px auto 11px; */
+    width: 838px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+.crearGuifosVideoYProgresoStyle {
+    background: var(--color05);
+    border: 1px solid var(--color19);
+    box-shadow: inset -2px -2px 0 0 var(--color14), inset 2px 2px 0 0 var(--color21);
+}
+
+.crearGuifosVideoYProgreso {
+    height: 440px;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.crearGuifosVideoYProgreso>video,
+.crearGuifosVideoYProgreso>img,
+.crearGuifosVideoYProgreso>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.crearGuifosVideoYProgreso>video,
+.crearGuifosVideoYProgreso>img {
+    width: 832px;
+    height: 434px;
+}
+
+
+/* GRABO VIDEO - INICIO */
+.btnsCrearGuifosCapturar {
+    margin-top: 21px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnCrearGuifoCapturar {
+    font-family: var(--ALL_font-family);
+    width: 144px;
+    height: 36px;
+    box-sizing: border-box;
+
+    line-height: 36px;
+
+    float: right;
+
+    position: relative;
+}
+
+.btnCrearGuifoCapturar::after {
+    content: '';
+    background-color: var(--btn_background);
+    background-image: var(--crearguif_capturar_icon);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+
+    width: 36px;
+    height: 36px;
+    box-sizing: border-box;
+
+    position: absolute;
+    right: 100%;
+    top: -1px;
+
+    border: var(--btn_border);
+    box-shadow: var(--btn_box-shadow);
+}
+
+.btnCrearGuifoCapturar:hover::after {
+    background-color: var(--btnHover_background);
+    border: var(--btnHover_border);
+    box-shadow: var(--btnHover_box-shadow);
+    outline: var(--ALL_outline);
+    outline-offset: var(--ALL_outline-offset);
+}
+
+.btnCrearGuifoCapturando {
+    background: var(--btn-capturando_background);
+    border: var(--btn-capturando_border);
+    box-shadow: var(--btn-capturando_box-shadow);
+    font-family: var(--btn-capturando_font-family);
+    font-weight: var(--btn-capturando_font-weight);
+    font-size: var(--btn-capturando_font-size);
+    color: var(--btn-capturando_color);
+    letter-spacing: var(--btn-capturando_letter-spacing);
+    text-align: var(--btn-capturando_text-align);
+    line-height: var(--btn-capturando_line-height);
+}
+
+.btnCrearGuifoCapturando:hover {
+    outline: var(--btn-secondary_outline);
+    outline-offset: var(--btn-secondary_outline-offset);
+}
+
+.btnCrearGuifoListo {
+    width: 144px;
+    height: 36px;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.btnCrearGuifoListo::after {
+    content: '';
+    background: var(--btn-capturando_background);
+    background-image: var(--btn_capturando_icon);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+
+    width: 36px;
+    height: 36px;
+    box-sizing: border-box;
+
+    position: absolute;
+    right: 100%;
+    top: -1px;
+
+    border: var(--btn-capturando_border);
+    box-shadow: var(--btn-capturando_box-shadow);
+}
+
+.btnCrearGuifoListo:hover::after {
+    outline: var(--btn-secondary_outline);
+    outline-offset: var(--btn-secondary_outline-offset);
+}
+
+.gifTimer {
+    width: 124px;
+    height: 36px;
+    box-sizing: border-box;
+
+    line-height: 36px;
+    text-indent: 21px;
+}
+
+.btnCrearGuifoRepetirCaptura {
+    width: 144px;
+    height: 36px;
+}
+
+.btnCrearGuifoRepetirSubitGuifo {
+    width: 144px;
+    height: 36px;
+
+    margin-left: 14px;
+}
+
+.btnCrearGuifoRepetirCancelar {
+    width: 144px;
+    height: 36px;
+}
+
+.subiendoGuifo>* {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+.subiendoGuifo>img {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../img/globe_img.png");
+}
+
+.subiendoGuifo>span {
+    margin: 8px auto 39px auto;
+    font-weight: 700;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+}
+
+.progress {
+    width: 324px;
+    height: 24px;
+    background: #B4B4B4;
+    box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.pogressFlasherismo {
+    /* SON 23 */
+    background: #999999;
+    width: 12px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.progressactivo {
+    background: var(--color01);
+}
+
+.subiendoGuifo>p {
+    margin-top: 8px;
+
+    font-size: 12px;
+    color: rgba(17, 0, 56, 0.64);
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 14px;
+}
+
+.subiendoGuifo>p>span {
+    text-decoration: line-through;
+}
+
+/* GRABO VIDEO - FIN */
+
+
+/* GUIGO SUBIDO CON EXTITO - INICIO */
+.containerCrearGuifosExito {
+    width: 721px;
+    height: 391px;
+    margin: 85px auto 0px auto;
+    position: relative;
+}
+
+.containerCrearGuifosExito>img {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 16px;
+    height: 14px;
+}
+
+.gifResultadoContenedor {
+    width: 371px;
+    height: 196px;
+    box-sizing: border-box;
+
+    position: relative;
+    top: 27px;
+    left: 24px;
+}
+
+.gifResultado {
+    width: 365px;
+    height: 191px;
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gifResultadoBtns {
+    position: absolute;
+    left: 419px;
+    top: 76px;
+}
+
+.gifResultadoBtns>p {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color03);
+    letter-spacing: 0;
+    line-height: 22px;
+
+    margin-bottom: 16px;
+}
+
+.btnCrearGuifoDescargarGuifo {
+    width: 256px;
+    height: 36px;
+    margin-bottom: 14px;
+}
+
+.btnCrearGuifoFinalizar {
+    width: 144px;
+    height: 36px;
+
+    position: absolute;
+    bottom: 44px;
+    right: 46px;
+}
+
+
+.misGuifos {
+    margin-top: 180px;
+}

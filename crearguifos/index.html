@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gif.OS - Crear Gif</title>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="../assets/styles/crearguifos.css">
+</head>
+
+<body>
+    <header>
+        <div class="gradient headerBar srinkText">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+            de visitas: 12.765.803</div>
+        <div class="container barraPrincipal relativeElement">
+            <div class="logo_main btn" onclick="self.location.href = '../index.html'"></div>
+            <img src="../assets/img/arrow.svg" alt="Volver a la pagina principal" class="backArrow btn outline"
+                onclick="cancelarCrearGuifos()">
+        </div>
+    </header>
+    <main>
+        <section class="sectionIntro">
+            <div class="containerCrearGuifosMeesage windowBackground">
+                <h2 class="gradient windowTitle titleBuscador">Crear Guifos</h2>
+                <div class="crearGuifosTextDiv">
+                    <img src="../assets/img/window-img.png" alt="Ícono genérico de aplicación"
+                        class="crearGuifosTextIcon">
+                    <h3>Aquí podrás crear tus propios guifos</h3>
+                    <div class="crearGuifosTextDescrip">
+                        <p>Crear tu <i><strong>guifo</strong></i> es muy fácil, graba cualquier imagen con tu cámara y
+                            obtén guifos personalizados. Los pasos para crear tu guifo son:</p>
+                        <p><b>1)</b> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</p>
+                        <p><b>2)</b> Capturar tu momento guifo</p>
+                        <p><b>3)</b> Revisar el momento</p>
+                        <p><b>4)</b> Listo para subir y compartir!</p>
+                        <p>¿Quieres comenzar a crear tu <i><strong>guifo</strong></i> ahora?</p>
+                    </div>
+                </div>
+                <nav class="crearGuifosMeesageBtns">
+                    <button onclick="cancelarCrearGuifos()"
+                        class="btnSecondary btn btnCrearGuifoCancelar ">Cancelar</button>
+                    <button onclick="comenzarCrearGuifos()"
+                        class="btnButton btnCrearGuifoComenzar btn">Comenzar</button>
+                </nav>
+            </div>
+        </section>
+        <section class="sectionRecording hide">
+            <div class="containerCrearGuifosCapturar windowBackground">
+                <h2 class="gradient windowTitle titleBuscador">Un Chequeo Antes de Empezar</h2>
+                <img class="btn outline" src="../assets/img/button3.svg" alt="Cancelar" title="Cancelar"
+                    onclick="cancelarCrearGuifos()">
+                <div class="containerCrearGuifosVideoYBotones">
+                    <div class="crearGuifosVideoYProgreso crearGuifosVideoYProgresoStyle">
+                        <video src="data:," autoplay class=""></video>
+                        <img src="data:," alt="" class="gifGrabado">
+                        <div class="subiendoGuifo hide">
+                            <img src="data:," alt="">
+                            <span>Estamos subiendo tu guifo…</span>
+                            <div class="progress">
+                            </div>
+                            <p>Tiempo restante: <span>38 años</span> algunos minutos</p>
+                        </div>
+                    </div>
+                    <div class="btnsCrearGuifosCapturar">
+                        <button onclick="capturarCrearGuifos()"
+                            class="btnButton btnCrearGuifoCapturar btn">Capturar</button>
+                        <button class="btnCrearGuifoCapturando btn btnCrearGuifoListo hide"
+                            onclick="detenerCapturaCrearGuifos()">
+                            Listo
+                        </button>
+                        <div class="btnsRepetirSubir hide">
+                            <button class="btnSecondary btn btnCrearGuifoRepetirCaptura"
+                                onclick="repetirCapturaCrearGuifos()">Repetir Captura</button>
+                            <button class="btnButton btn btnCrearGuifoRepetirSubitGuifo"
+                                onclick="subirGifCrearGuifos()">Subir Guifo</button>
+                        </div>
+                        <span class="inputTextStyle gifTimer hide">00:00:03:06</span>
+
+                        <button class="btnSecondary btn btnCrearGuifoRepetirCancelar hide"
+                            onclick="cancelarSubirGifCrearGuifos()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hide sectionResult">
+            <div class="windowBackground containerCrearGuifosExito">
+                <h2 class="gradient windowTitle titleBuscador">Guifo Subido Con Éxito</h2>
+                <img class="btn outline" src="../assets/img/button3.svg" alt="Cancelar" title="Cancelar"
+                    onclick="cancelarCrearGuifos()">
+                <div class="crearGuifosVideoYProgresoStyle gifResultadoContenedor">
+                    <img class="gifResultado" src="data:," alt="Gif creado">
+                </div>
+                <div class="gifResultadoBtns">
+                    <p>Guifo creado con éxito</p>
+                    <button class="btnSecondary btn btnCrearGuifoDescargarGuifo"
+                        onclick="copiarEnlaceGifSubidoCrearGuifos()">Copiar Enlace
+                        Guifo</button><br>
+                    <button class="btnSecondary btn btnCrearGuifoDescargarGuifo" id="prueba"
+                        onclick="descargarGifSubidoCrearGuifos()">Descargar
+                        Guifo</button>
+                </div>
+                <button onclick="listoCrearGuifos()" class="btnButton btnCrearGuifoFinalizar btn">Listo</button>
+            </div>
+        </section>
+    </main>
+    <section class="misGuifos">
+        <div class="container">
+            <h2 class="sectionTitle">Mis guifos</h2>
+            <div class="grilla grillaMisGuifos">
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/const/const.js"></script>
+    <script src="../assets/js/classes/Giphy.js"></script>
+    <script src="../assets/js/helper.js"></script>
+    <script src="../assets/js/misGuifos.js"></script>
+    <script src="../assets/js/crearguifos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gif.OS</title>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="gradient headerBar srinkText">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+            de visitas: 12.765.803</div>
+        <div class="container barraPrincipal">
+            <div class="logo_main"></div>
+            <nav>
+                <ul>
+                    <li><a class="btnButton btnCrearGuifo btn" href="./crearguifos/index.html">Crear Guifos</a></li>
+                    <li>
+                        <div>
+                            <span class="btnButton btnTheme btn" onclick="toggleHideInThemeList()">Elegir tema</span>
+                            <div class="menuBtnThemes windowBackground hide">
+                                <span class="btnThemeList  btnThemeLight btn" onclick="setThemeTo(true)">Sailor
+                                    Day</span>
+                                <span class="btnThemeList btnThemeDark btn" onclick="setThemeTo(false)">Sailor
+                                    Night</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="btnMisGuifos btn" href="./misguifos/index.html">Mis Guifos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="busquedas">
+        <div class="container">
+            <div class="windowBackground">
+                <span class="gradient windowTitle titleBuscador">Buscar</span>
+                <div class="barraBusquedaYBoton">
+                    <input class="inputTextStyle inputText" type="text" name="fname" oninput="checkKeyInput()"
+                        onkeyup="presionarEnter(event)"
+                        placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                    <button disabled class="btnButton btnBuscar btn" onclick="btnBuscar()">
+                        <span class="buscarBtnImg"></span>
+                        <span class="buscarBtnLabel">Buscar</span>
+                    </button>
+                </div>
+                <div class="windowBackground listadoBusquedasSugeridas hide">
+                    <span class="busquedaSugerida">Resultado de búsqueda sugerido</span>
+                    <span class="busquedaSugerida">Un resultado similar de búsqueda</span>
+                    <span class="busquedaSugerida">Y otro más</span>
+                </div>
+            </div>
+            <nav class="busquedasPrevias">
+                <ul>
+                    <!-- <li><span class="etiquetasBusquedasAnteriores btn" onclick="buscoLabel(event)">#2</span></li> -->
+                </ul>
+            </nav>
+            <section class="misBusquedas hide">
+                <h2 class="sectionTitle">Ejemplos de búsquedas (resultados)...</h2>
+                <div class="grilla grillaBusqueda">
+                    <!-- <div class="windowGif" id_gif="xT0GqJZqvCrSup5hNS" title="volleyball fail GIF">
+                        <img src="https://media3.giphy.com/media/xT0GqJZqvCrSup5hNS/200_d.gif?cid=0ac0fce8701e9c393eda76fddd02a363bb4dd042d715a25a&amp;rid=200_d.gif"
+                            class="gif gif_corto" alt="volleyball fail GIF">
+                        <div class="gifOutline">
+                            <span class="gradient windowTitle srinkText gifOutlineText">#volleyball
+                                #fail</span>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="guifsSugeridoYTendencia">
+        <div class="container">
+            <h2 class="sectionTitle">Hoy te sugerimos:</h2>
+            <div class="grilla grillaSugerencia">
+                <!-- <div class="boxGifSugerencia windowBackground" id_gif="tKxvuLmOaKEDQ2hWie" sugerencia="robot">
+                    <span class="gradient windowTitle srinkText titleGifSugerido">robot</span>
+                    <img class="btn outline" src="./assets/img/button3.svg" alt="Quitar sugerencia"
+                        title="Quitar sugerencia">
+                    <img class="outline gifSug"
+                        src="https://media0.giphy.com/media/tKxvuLmOaKEDQ2hWie/200_d.gif?cid=0ac0fce812765dbf2c59be919b828bab97ed11d481b51739&amp;rid=200_d.gif"
+                        alt="surprised oh my GIF" title="surprised oh my GIF">
+                    <span class="etiquetasBusquedasAnteriores btn btnVerMas outline"
+                        title="Busca guis de la categoría robot">Ver más...</span>
+                </div> -->
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="sectionTitle">Tendencias</h2>
+            <div class="grilla grillaTendencias">
+            </div>
+        </div>
+    </section>
+
+    <div id="busqueda_recientes"></div>
+    <div id="grilla"></div>
+    <script src="./assets/js/const/const.js"></script>
+    <script src="./assets/js/classes/Giphy.js"></script>
+    <script src="./assets/js/helper.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
